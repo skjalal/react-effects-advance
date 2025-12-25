@@ -1,7 +1,16 @@
 import "./App.css";
+import Header from "./components/Header.tsx";
+import Quiz from "./components/Quiz.tsx";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Header />
+      <main>
+        <Quiz />
+      </main>
+    </>
+  );
 }
 
 export default App;
