@@ -9,9 +9,9 @@ const QuestionTimer: React.FC<QuestionTimerProps> = ({
   const [remainingTime, setRemainingTime] = useState<number>(timeout);
 
   useEffect(() => {
-    const timer = setTimeout(onTimeout, timeout);
+    const timer = onTimeout ? setTimeout(onTimeout, timeout) : null;
     return () => {
-      clearTimeout(timer);
+      if (timer) clearTimeout(timer);
     };
   }, [timeout, onTimeout]);
 
