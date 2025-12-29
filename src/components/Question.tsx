@@ -54,7 +54,7 @@ const Question: React.FC<QuestionProps> = ({
       <QuestionTimer
         key={timer}
         timeout={timer}
-        onTimeout={answer.selectedAnswer === "" ? onSkipAnswer : null}
+        onTimeout={answer.selectedAnswer === "" ? onSkipAnswer : undefined}
         mode={answerState}
       />
       <h2>{QUESTIONS[index].text}</h2>

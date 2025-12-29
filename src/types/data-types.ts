@@ -6,7 +6,7 @@ type Question = {
 
 type QuestionTimerProps = {
   timeout: number;
-  onTimeout: () => void | null;
+  onTimeout?: () => void;
   mode: string;
 };
 
